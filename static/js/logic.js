@@ -8,7 +8,7 @@ d3.json(queryUrl, function(data) {
   createFeatures(data.features);
 });
 
-function createFeatures(earthquakeData) {
+function createFeatures(earthquakedata) {
   // Define a function we want to run once for each feature in the features array
   // Give each feature a popup describing the place and time of the earthquake
   function onEachFeature(feature, layer) {
@@ -51,11 +51,11 @@ function markerstyle(mag){
   }
 }
 
-  var earthquakes = L.geoJSON(earthquakeData, {
-    pointToLayer: function(earthquakeData, latlng){
+  var earthquakes = L.geoJSON(earthquakedata, {
+    pointToLayer: function(earthquakedata, latlng){
       return L.circle(latlng,{
-        radius: size(earthquakeData.properties.mag),
-        color: markerstyle(earthquakeData.properties.mag),
+        radius: size(earthquakedata.properties.mag),
+        color: markerstyle(earthquakedata.properties.mag),
         fillOpacity:.3
       });
     },
