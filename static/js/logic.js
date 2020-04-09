@@ -32,22 +32,16 @@ function markerstyle(mag){
     return 'green'
   } else if (floatmag <= 1) {
     return 'yellow'
-  } else if (floatmag >= 2){
+  } else if (floatmag <= 2){
     return 'orange'
-  } else if (floatmag >= 3) {
+  } else if (floatmag <= 3) {
     return 'red'
-  } else if (floatmag >= 4) {
+  } else if (floatmag <= 4) {
     return 'black' 
   } else if (floatmag == 1.3600000000000001) {
       'black'
   } else {
     return 'pink' //to catch errors
-    //for some reason a lot return pink... I checked a value and
-    //the value for one example was 1.8999 so I'm not sure why it wasn't orange
-  }
-  if (1.3600000000000001 < 2){
-      console.log("what the heck is going on here")
-      //this returns as true, so I'm confused.
   }
 }
 
